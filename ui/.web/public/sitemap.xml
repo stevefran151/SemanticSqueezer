@@ -3,10 +3,4 @@
   <url>
     <loc>http://localhost:3000/</loc>
   </url>
-  <url>
-    <loc>http://localhost:3000/playground</loc>
-  </url>
-  <url>
-    <loc>http://localhost:3000/telemetry</loc>
-  </url>
 </urlset>

@@ -14,12 +14,6 @@ type Pages = {
   "/": {
     params: {};
   };
-  "/playground": {
-    params: {};
-  };
-  "/telemetry": {
-    params: {};
-  };
   "/*": {
     params: {
       "*": string;
@@ -30,15 +24,7 @@ type Pages = {
 type RouteFiles = {
   "root.jsx": {
     id: "root";
-    page: "/" | "/playground" | "/telemetry" | "/*";
-  };
-  "routes/[playground]._index.jsx": {
-    id: "routes/[playground]._index";
-    page: "/playground";
-  };
-  "routes/[telemetry]._index.jsx": {
-    id: "routes/[telemetry]._index";
-    page: "/telemetry";
+    page: "/" | "/*";
   };
   "routes/_index.jsx": {
     id: "routes/_index";
@@ -52,8 +38,6 @@ type RouteFiles = {
 
 type RouteModules = {
   "root": typeof import("./app/root.jsx");
-  "routes/[playground]._index": typeof import("./app/routes/[playground]._index.jsx");
-  "routes/[telemetry]._index": typeof import("./app/routes/[telemetry]._index.jsx");
   "routes/_index": typeof import("./app/routes/_index.jsx");
   "routes/[404]._index": typeof import("./app/routes/[404]._index.jsx");
 };

@@ -1,0 +1,304 @@
+﻿Debug: Overriding config value loglevel with env var LOGLEVEL=debug
+--------------------------------- System Info ---------------------------------
+Debug: Config file: 
+'D:\\College\\AIDev\\.venv\\Lib\\site-packages\\reflex\\config.py'
+Debug: Config: Config(app_name='ui', app_module_import=None, 
+loglevel=<LogLevel.DEBUG: 'debug'>, frontend_port=None, frontend_path='', 
+backend_port=None, api_url='http://localhost:8000', 
+deploy_url='http://localhost:3000', backend_host='0.0.0.0', 
+db_url='sqlite:///reflex.db', async_db_url=None, redis_url=None, 
+telemetry_enabled=True, enable_pyleak_monitoring=False, 
+pyleak_blocking_threshold=0.1, pyleak_thread_grace_period=0.2, 
+pyleak_action=None, 
+bun_path=WindowsPath('C:/Users/steve/AppData/Local/reflex/bun/bin/bun.exe'), 
+static_page_generation_timeout=60, cors_allowed_origins=('*',), 
+react_strict_mode=True, frontend_packages=[], 
+state_manager_mode=<StateManagerMode.DISK: 'disk'>, 
+redis_lock_expiration=10000, redis_lock_warning_threshold=1000, 
+redis_token_expiration=3600, _non_default_attributes={'plugins', 'app_name', 
+'loglevel'}, env_file=None, state_auto_setters=None, 
+show_built_with_reflex=None, is_reflex_cloud=False, 
+extra_overlay_function=None, plugins=[SitemapPlugin(), 
+TailwindV4Plugin(config={'plugins': ['@tailwindcss/typography@0.5.19']})], 
+disable_plugins=[], transport='websocket')
+Debug: Running command: [WindowsPath('D:/node.js/node.EXE'), '--version']
+Debug: Running command: 
+[WindowsPath('C:/Users/steve/AppData/Local/reflex/bun/bin/bun.exe'), 
+'--version']
+Debug: [Reflex 0.8.27 with Python 3.12.9 (PATH: 
+D:\College\AIDev\.venv\Scripts\python.exe)]
+Debug: [Node 22.17.0 (Minimum: 20.19.0) (PATH:D:\node.js\node.EXE)]
+Debug: [Bun 1.3.6 (Minimum: 1.3.0) (PATH: 
+C:\Users\steve\AppData\Local\reflex\bun\bin\bun.exe)]
+Debug: [OS Windows 10.0.26200]
+Debug: Using package installer at: 
+['C:\\Users\\steve\\AppData\\Local\\reflex\\bun\\bin\\bun.exe', 
+'D:\\node.js\\npm.CMD']
+Debug: Using package executer at: 
+[['C:\\Users\\steve\\AppData\\Local\\reflex\\bun\\bin\\bun.exe'], 
+['D:\\node.js\\npm.CMD']]
+Warning: Windows Subsystem for Linux (WSL) is recommended for improving initial
+install times.
+Debug: Resetting disk state manager.
+Debug: Checking if Frontend port: 3000 is in use.
+Debug: Checking if Frontend port: 3000 is in use for families: 
+[<AddressFamily.AF_INET: 2>, <AddressFamily.AF_INET6: 23>].
+Debug: Frontend port: 3000 is not in use.
+Debug: Checking if Backend port: 8000 is in use.
+Debug: Checking if Backend port: 8000 is in use for families: 
+[<AddressFamily.AF_INET: 2>, <AddressFamily.AF_INET6: 23>].
+Warning: Unable to bind to :8000 due to: [WinError 10048] Only one usage of 
+each socket address (protocol/network address/port) is normally permitted.
+Info: The backend will run on port 8001.
+Debug: Overriding config value frontend_port with env var FRONTEND_PORT=3000
+Debug: Overriding config value backend_port with env var BACKEND_PORT=8001
+----------------------------- Starting Reflex App -----------------------------
+Debug: Checking for the latest version of reflex...
+Debug: Sending HTTPS request to https://pypi.org/pypi/reflex/json
+Debug: Received response from https://pypi.org/pypi/reflex/json in 0.245 
+seconds
+Debug: Latest version of reflex: 0.8.27
+Debug: Overriding config value loglevel with env var LOGLEVEL=debug
+Debug: Overriding config value frontend_port with env var FRONTEND_PORT=3000
+Debug: Overriding config value backend_port with env var BACKEND_PORT=8001
+Debug: Registered lifespan task: windows_hot_reload_lifespan_hack
+Debug: Evaluating page: index
+DeprecationWarning: state_auto_setters defaulting to True has been deprecated 
+in version 0.8.9. The default value will be changed to False in a future 
+release. Set state_auto_setters explicitly or define setters explicitly. Used 
+set_user_prompt in State without defining it. It will be completely removed in 
+0.9.0. (ui\ui.py:143)
+Debug: [timing] Evaluate Pages (Frontend): 0.11s
+d:\College\AIDev\.venv\Script
+s\reflex.exe : Traceback 
+(most recent call last):
+At line:1 char:1
++ d:\College\AIDev\.venv\Scri
+pts\reflex.exe run 
+--loglevel debug *>&1 | ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (Traceba  
+  ck (most recent call las   
+ t)::String) [], RemoteEx    
+ception
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 
+  File "D:\College\AIDev\.ven
+v\Lib\site-packages\reflex\ut
+ils\prerequisites.py", line 
+349, in 
+compile_or_validate_app
+    get_compiled_app(
+  File "D:\College\AIDev\.ven
+v\Lib\site-packages\reflex\ut
+ils\prerequisites.py", line 
+268, in get_compiled_app
+    app._compile(prerender_ro
+utes=prerender_routes, 
+dry_run=dry_run, 
+use_rich=use_rich)
+  File "D:\College\AIDev\.ven
+v\Lib\site-packages\reflex\ap
+p.py", line 1248, in _compile
+    
+self._compile_page(route, 
+save_page=should_compile)
+  File "D:\College\AIDev\.ven
+v\Lib\site-packages\reflex\ap
+p.py", line 878, in 
+_compile_page
+    component = compiler.comp
+ile_unevaluated_page(
+                ^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
+  File "D:\College\AIDev\.ven
+v\Lib\site-packages\reflex\co
+mpiler\compiler.py", line 
+807, in 
+compile_unevaluated_page
+    component = into_componen
+t(page.component)
+                ^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
+  File "D:\College\AIDev\.ven
+v\Lib\site-packages\reflex\co
+mpiler\compiler.py", line 
+737, in into_component
+    component_called = 
+component()
+                       
+^^^^^^^^^^^
+  File "D:\College\AIDev\sema
+ntic_squeezer\ui\ui\ui.py", 
+line 295, in index
+    rx.vstack(playground_pane
+l(), sankey_panel(), 
+width="100%", spacing="6"),
+              
+^^^^^^^^^^^^^^^^^^
+  File "D:\College\AIDev\sema
+ntic_squeezer\ui\ui\ui.py", 
+line 176, in playground_panel
+    rx.code_block(State.infer
+ence_result, 
+language="text", 
+bg="rgba(0,0,0,0.4)"),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\College\AIDev\.ven
+v\Lib\site-packages\reflex\co
+mponents\datadisplay\code.py"
+, line 485, in create
+    code_block = 
+super().create(
+                 
+^^^^^^^^^^^^^^^
+  File "D:\College\AIDev\.ven
+v\Lib\site-packages\reflex\co
+mponents\component.py", line 
+1069, in create
+    return cls._create(childr
+en_normalized, **props)
+           ^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\College\AIDev\.ven
+v\Lib\site-packages\reflex\co
+mponents\component.py", line 
+1084, in _create
+    comp._post_init(children=
+list(children), **props)
+  File "D:\College\AIDev\.ven
+v\Lib\site-packages\reflex\co
+mponents\component.py", line 
+806, in _post_init
+    raise TypeError(
+TypeError: Invalid var 
+passed for prop 
+CodeBlock.language, expected 
+type typing.Literal['abap', 
+'abnf', 'actionscript', 
+'ada', 'agda', 'al', 
+'antlr4', 'apacheconf', 
+'apex', 'apl', 
+'applescript', 'aql', 
+'arduino', 'arff', 
+'asciidoc', 'asm6502', 
+'asmatmel', 'aspnet', 
+'autohotkey', 'autoit', 
+'avisynth', 'avro-idl', 
+'bash', 'basic', 'batch', 
+'bbcode', 'bicep', 'birb', 
+'bison', 'bnf', 'brainfuck', 
+'brightscript', 'bro', 
+'bsl', 'c', 'cfscript', 
+'chaiscript', 'cil', 
+'clike', 'clojure', 'cmake', 
+'cobol', 'coffeescript', 
+'concurnas', 'coq', 'core', 
+'cpp', 'crystal', 'csharp', 
+'cshtml', 'csp', 'css', 
+'css-extras', 'csv', 
+'cypher', 'd', 'dart', 
+'dataweave', 'dax', 'dhall', 
+'diff', 'django', 
+'dns-zone-file', 'docker', 
+'dot', 'ebnf', 
+'editorconfig', 'eiffel', 
+'ejs', 'elixir', 'elm', 
+'erb', 'erlang', 'etlua', 
+'excel-formula', 'factor', 
+'false', 
+'firestore-security-rules', 
+'flow', 'fortran', 'fsharp', 
+'ftl', 'gap', 'gcode', 
+'gdscript', 'gedcom', 
+'gherkin', 'git', 'glsl', 
+'gml', 'gn', 'go', 
+'go-module', 'graphql', 
+'groovy', 'haml', 
+'handlebars', 'haskell', 
+'haxe', 'hcl', 'hlsl', 
+'hoon', 'hpkp', 'hsts', 
+'http', 'ichigojam', 'icon', 
+'icu-message-format', 
+'idris', 'iecst', 'ignore', 
+'index', 'inform7', 'ini', 
+'io', 'j', 'java', 
+'javadoc', 'javadoclike', 
+'javascript', 
+'javastacktrace', 'jexl', 
+'jolie', 'jq', 'js-extras', 
+'js-templates', 'jsdoc', 
+'json', 'json5', 'jsonp', 
+'jsstacktrace', 'jsx', 
+'julia', 'keepalived', 
+'keyman', 'kotlin', 'kumir', 
+'kusto', 'latex', 'latte', 
+'less', 'lilypond', 
+'liquid', 'lisp', 
+'livescript', 'llvm', 'log', 
+'lolcode', 'lua', 'magma', 
+'makefile', 'markdown', 
+'markup', 
+'markup-templating', 
+'matlab', 'maxscript', 
+'mel', 'mermaid', 'mizar', 
+'mongodb', 'monkey', 
+'moonscript', 'n1ql', 
+'n4js', 'nand2tetris-hdl', 
+'naniscript', 'nasm', 
+'neon', 'nevod', 'nginx', 
+'nim', 'nix', 'nsis', 
+'objectivec', 'ocaml', 
+'opencl', 'openqasm', 'oz', 
+'parigp', 'parser', 
+'pascal', 'pascaligo', 
+'pcaxis', 'peoplecode', 
+'perl', 'php', 'php-extras', 
+'phpdoc', 'plsql', 
+'powerquery', 'powershell', 
+'processing', 'prolog', 
+'promql', 'properties', 
+'protobuf', 'psl', 'pug', 
+'puppet', 'pure', 
+'purebasic', 'purescript', 
+'python', 'q', 'qml', 
+'qore', 'qsharp', 'r', 
+'racket', 'reason', 'regex', 
+'rego', 'renpy', 'rest', 
+'rip', 'roboconf', 
+'robotframework', 'ruby', 
+'rust', 'sas', 'sass', 
+'scala', 'scheme', 'scss', 
+'shell-session', 'smali', 
+'smalltalk', 'smarty', 
+'sml', 'solidity', 
+'solution-file', 'soy', 
+'sparql', 'splunk-spl', 
+'sqf', 'sql', 'squirrel', 
+'stan', 'stylus', 'swift', 
+'systemd', 't4-cs', 
+'t4-templating', 't4-vb', 
+'tap', 'tcl', 'textile', 
+'toml', 'tremor', 'tsx', 
+'tt2', 'turtle', 'twig', 
+'typescript', 'typoscript', 
+'unrealscript', 'uorazor', 
+'uri', 'v', 'vala', 'vbnet', 
+'velocity', 'verilog', 
+'vhdl', 'vim', 
+'visual-basic', 
+'warpscript', 'wasm', 
+'web-idl', 'wiki', 
+'wolfram', 'wren', 'xeora', 
+'xml-doc', 'xojo', 'xquery', 
+'yaml', 'yang', 'zig'], got 
+value text of type <class 
+'str'>.
+Happened while evaluating 
+page 'index'
